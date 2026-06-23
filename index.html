@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-signin-client_id" content="580275729808-bc7ufp7jt2diuuscv7af23j40jannrbu.apps.googleusercontent.com">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Lelap Booking Care — Booking perawatan Mama & Bayi di Salatiga, mudah & cepat.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Lelap Booking Care">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Lelap Booking Care</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Firebase SDK — diperlukan oleh firebase_core_web -->
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+  <script>
+    // Unregister stale service worker — forces fresh load every time
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(r => r.forEach(reg => reg.unregister()));
+    }
+  </script>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+</head>
+<body>
+  <!-- Firebase init — authDomain wajib untuk Google Sign-In -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDywT6E7I3zKqQiZTLn0XZeewc-D_FDMfM",
+      authDomain: "lelap-booking-care.firebaseapp.com",
+      projectId: "lelap-booking-care",
+      storageBucket: "lelap-booking-care.firebasestorage.app",
+      messagingSenderId: "580275729808",
+      appId: "1:580275729808:web:5e6cf04a4ad56e6e0e2f15",
+      measurementId: "G-PZR9R376QS"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="flutter_bootstrap.js?v=1781013912" async></script>
+</body>
+</html>
