@@ -2,15 +2,6 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 8080;
-
-// Serve static Flutter web build
 app.use(express.static(__dirname));
-
-// SPA fallback — all routes → index.html
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Lelap Frontend running on port ${PORT}`);
-});
+app.get('*', (req, res) => { res.sendFile(path.join(__dirname, 'index.html')); });
+app.listen(PORT, '0.0.0.0', () => { console.log(`Lelap Frontend running on port ${PORT}`); });
